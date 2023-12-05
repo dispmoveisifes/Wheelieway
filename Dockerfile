@@ -16,6 +16,8 @@ RUN apt-get update && apt-get install -y libpq-dev \
     intl \
     zip \
     && a2enmod rewrite
+	
+RUN sed -E -i -e 's/max_execution_time = 30/max_execution_time = 120/' /etc/php.ini
 
 # Expose port 80
 EXPOSE 80
