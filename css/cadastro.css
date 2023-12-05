@@ -1,0 +1,199 @@
+@import "fontsAndColors.css";
+
+* {
+    font-family: var(--font-inter);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+}
+
+.d-flex{
+    display: flex;
+    justify-content: center;
+}
+
+.fundoEscuro{
+    background-color: var(--color-blue5);
+    height: 100vh;
+    width: 50vw;
+    position: absolute;
+    left: 0;
+    box-shadow: 5px 0px 5px lightgray;
+}
+
+.fundo{
+    height: 100vh;
+    width: 45%;
+    position: absolute;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#selectImg{
+    font-size: 36px;
+    color: var(--color-blue4)
+}
+
+.container-field-icon{
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+body{
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+#imgFundo{
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    top:0;
+    width: 100vw;
+    height: 100vh;
+}
+
+label[for="containerFieldSet"]{
+    font-size: 36px;
+    font-weight: bold;
+}
+
+label[for="containerFieldSet"]::after{
+    content: "";
+    display: block;
+    width: 15%;
+    height: 3px;
+    background-color: var(--color-blue5);
+    margin-bottom: 10px;
+}
+
+form{   
+    justify-content: center !important;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 5px;
+    padding: 30px 40px;
+    box-shadow: 1px 1px 5px black;
+}
+
+
+fieldset{
+    display: flex;
+    flex-flow: column;
+    gap: 30px;
+    border: none;
+    width: 100%;
+    padding: 0 10px
+}
+
+#infoBasic{
+    margin-bottom: 20px;
+}
+
+
+#fieldAval{
+    background-color: red;
+}
+
+#infoBasic div, #adress div{
+    display:  flex;
+    flex-direction: column;
+}
+
+select{
+    margin-top: 5px;
+    font-size: 16px;
+    border: none;
+    border-bottom: 1px solid var(--color-blue4);
+}
+
+
+input[type="text"], textarea{
+    font-size: 16px;
+    outline: 0;
+    border: none;
+    border-bottom: 1px solid var(--color-blue5);
+    height: 25px;
+    padding-left: 5px;
+    width: 100%;
+}
+
+input[type="submit"]{
+    background-color: white;
+    color: var(--color-blue5);
+    font-weight: bold;
+    font-size: 18px;
+    width: 50%;
+    height: auto;
+    min-width: 200px;
+    height: 30px;
+    border: 1px groove var(--color-blue5);
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.tituloForm{
+    font-size: 20px;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.estilo-select{
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.estilo-foto-perfil{
+    flex-direction: row !important;
+    align-items: center;
+    gap: 5px;
+    font-size: 18px;
+
+}
+
+i{
+    color: var(--color-blue4)
+}
+
+@media only screen and (max-width: 1000px) {
+    #imgFundo{
+        display: none;
+    }
+
+    .fundo{
+        height: auto;
+        width: 100%;
+        position: relative;
+        left: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    body{
+        background-color: var(--color-blue5);
+        padding: 5px;
+    }
+
+}
+
+@media only screen and (max-width: 290px) {
+    .estilo-select{
+        flex-flow: column !important;
+    }
+
+    .container-field-icon{
+        margin-bottom: 10px;
+    }
+}

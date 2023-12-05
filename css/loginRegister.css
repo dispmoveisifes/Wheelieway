@@ -1,0 +1,121 @@
+@import "fontsAndColors.css";
+
+/*posicionamento geral e design geral*/
+    * {
+        font-family: var(--font-inter);
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    #login_content {
+        height: 100vh;
+        width: 100%;
+        background: var(--color-mainGradient);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 60px;
+    }
+
+    .error-box{
+        background-color: red;
+        border-radius: 8px;
+        color: white;
+        height: auto;
+        padding: 10px;
+        box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.336);
+    }
+
+    .logo {
+        height: 15rem;
+        width: 15rem;
+    }
+
+    #login_form {
+        background-color: var(--color-smoothWhite);
+        display: flex;
+        flex-direction: column;
+        padding: 30px 40px;
+        border-radius: 8px;
+        gap: 30px;
+        box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.336);
+        height: fit-content;
+    }
+/*------------------*/
+
+/*design e posicionamento do header do formulário*/
+    #form_header h1 {
+        font-size: 40px;
+        position: relative;
+    }
+
+    #form_header h1::before {
+        position: absolute;
+        content: '';
+        width: 50px;
+        background-color: var(--color-blue5);
+        height: 3px;
+        bottom: 5px;
+        border-radius: 5px;
+    }
+/*------------------*/
+
+/*design e posicionamento dos inputs*/
+    #inputs {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .input-box label {
+        font-size: 14px;
+        color: var(--color-gray);
+    }
+
+    .input-field {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        padding: 3px;
+        cursor: text;
+        border-bottom: 1px solid var(--color-blue5)
+    }
+
+    .input-field i {
+        font-size: 18px;
+        color: var(--color-black);
+    }
+
+    .input-field input {
+        border: none;
+        background-color: transparent;
+        width: 280px;
+        font-size: 18px;
+        padding: 0px 5px;
+    }
+
+    .input-field input:focus {
+        outline: none;
+    }
+/*------------------*/
+
+/*design e posicionamento do botão*/
+    #login_button {
+        border: none;
+        background: var(--color-mainGradient);
+        color: var(--color-smoothWhite);
+        padding: 7px;
+        font-size: 18px;
+        border-radius: 3px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    #login_button:hover {
+        transform: scale(1.05);
+    }
+/*------------------*/

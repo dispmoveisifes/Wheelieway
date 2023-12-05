@@ -1,0 +1,313 @@
+@import url('https://fonts.cdnfonts.com/css/lemonmilk');
+@import "fontsAndColors.css";
+
+#header_name h1 {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+#nomeUser {
+  margin-top: 5px;
+}
+
+.header-btnRegister {
+  background-color: var(--color-blue2);
+  color: var(--color-white);
+  border: solid 2px var(--color-blue2);
+  padding: 0.8rem 0.5rem 0.8rem 0.5rem;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  transition: all 0.4s;
+}
+
+.store-map-button {
+  background-color: white;
+  border: none;
+  color: var(--color-blue5);
+  padding: 7px;
+  border-radius: 30px;
+  font-size:  11px;
+  font-weight: bold;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+.store-map-button:hover {
+  background-color: var(--color-smoothWhite);
+  color: var(--color-blue5);
+}
+
+.zz {
+  background-size: cover;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 10px;
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* The Close Button */
+.close {
+  position: fixed;
+  z-index: 1;
+  top: 15px;
+  right: 35px;
+  color: #ffffff;
+  font-size: 60px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.seta {
+  flex: 1;
+  font-size: 80px;
+  z-index: 1;
+  color: #ffffff;
+  font-weight: bold;
+  transition: 0.3s;
+  cursor: pointer;
+  align-self: center;
+}
+
+#seta1 {
+  justify-content: end;
+}
+
+#seta2 {
+  right: 0px;
+}
+
+.close:hover,
+.close:focus,
+.seta.hover,
+.seta.focus{
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.grude {
+  position: sticky;
+  top: 0px;
+}
+
+.fAzul {
+  background-color: var(--color-blue5);
+  height: 10vw !important;
+  width: 100%;  
+  position: absolute;
+}
+
+.rCard {
+  z-index: 1;
+}
+
+.containerBotoes{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.containerFotos{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#editFotoIcon{
+  position: absolute;
+  top: 50%;  /* position the top  edge of the element at the middle of the parent */
+  left: 50%; /* position the left edge of the element at the middle of the parent */
+  transform: translate(-50%, -50%);
+  font-size: 72px;
+  color: lightgrey;
+  opacity: 0;
+  transition: opacity 0.1s ease-in-out;
+}
+
+#editFotoIcon:hover{
+  display: block;
+  opacity: 1;
+  cursor: pointer;
+}
+
+#novaFoto{
+  display: none;
+}
+
+.nomeContainer{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+}
+
+#fotoPerfil{
+  object-fit: cover;
+  width: 60%;
+}
+
+.imagens {
+  width: fit-content;
+}
+
+.imagemAbre {
+  cursor: pointer;
+  object-fit: cover;
+}
+
+.imagemAbre:hover {opacity: 0.8;}
+
+.mw {
+  max-width: 80px;
+}
+
+.comentario {
+  margin-bottom: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.divImgEscura {
+  width: 50px;
+  height: 50px;
+  position:relative; 
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.divImgEscura:hover {opacity: 0.8;}
+
+.imgEscura {
+  width: 50px; 
+  height: 50px; 
+  border-radius: var(--bs-border-radius); 
+  filter: brightness(30%); 
+  justify-content: center;
+}
+
+.qtdFotos {
+  position: absolute; 
+  color: #ffffff; 
+}
+
+.escondetexto {
+  text-align: left;
+  color: #808080;
+  cursor: pointer;
+}
+
+.modalSelecionado {
+  display: flex !important;
+}
+
+.escondetexto:hover {color: #c4c4c4;}
+
+.container-editaperfil {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+}
+
+.container-editaperfil form {
+  background-color: var(--color-smoothWhite);
+  display: flex;
+  flex-direction: column;
+  padding: 30px 40px;
+  border-radius: 8px;
+  gap: 30px;
+  box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.336);
+  height: fit-content;
+  border: 3px solid var(--color-blue5);
+}
+
+#form_header h1 {
+  font-size: 40px;
+  position: relative;
+}
+
+#inputs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.input-box label {
+  font-size: 14px;
+  color: var(--color-gray);
+}
+
+.input-field {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 3px;
+  cursor: text;
+  border-bottom: 1px solid var(--color-blue5)
+}
+
+.input-field input {
+  border: none;
+  background-color: transparent;
+  width: 280px;
+  font-size: 18px;
+  padding: 0px 5px;
+}
+
+.input-field input:focus {
+  outline: none;
+}
+
+#btnModals {
+  border: none;
+  background: var(--color-mainGradient);
+  color: var(--color-smoothWhite);
+  padding: 7px;
+  font-size: 18px;
+  border-radius: 3px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.novaFotoLabel {
+  padding: 10px 10px;
+  width: 200px;
+  background-color: var(--color-blue5);
+  color: var(--color-white);
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 10px;
+  cursor: pointer;
+}

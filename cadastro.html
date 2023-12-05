@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/cadastro.css">
+    <script src="script/cadastro.js" defer></script>
+    <script src="script/coordenadasTeste.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+<body class="d-flex">
+        <div class="fundo">
+            <img src="img/cadastro/arteTelaCadastro.png" id="imgFundo" alt="">
+            <form enctype="multipart/form-data" class="d-flex" id="form_estab" action="php/insertEstabelecimento.php" method="post">
+                <label for="containerFieldSet">Cadastro</label>
+                <div class="container-field-set">
+                    <div class="container-field-icon">
+                        <i class="fa-solid fa-address-card"></i>
+                        <label for="infoBasic">Informações básicas</label>
+                    </div>
+                    <fieldset id="infoBasic">
+                        <div class="estilo-foto-perfil">
+                            <i class="fa-solid fa-file-image" id="selectImg"></i>
+                            <div id="selectImgAval">Foto de perfil do estabelecimento</div>
+                            <input type="file" id="imgPerfil" name="img_perfil" accept="images/*" style="display: none;">
+                        </div>
+                        <div>
+                            <!-- <label for="nomeEstabelecimento">Nome do estabelecimento</label> -->
+                            <input required type="text" name="nome_estabelecimento" id="nomeEstabelecimento" placeholder="Nome do estabelecimento">
+                        </div>
+                        <div>
+                            <div>Categoria</div>
+                            <select name="tipo_estab" id="tipoEstab">
+                                <option value="1">Restaurantes</option>
+    	                        <option value="2">Hoteis</option>
+    	                        <option value="3">Centros Educativos</option>
+    	                        <option value="4">Lazer e Esporte</option>
+                                <option value="5">Lojas</option>
+    	                        <option value="6">Hospitais</option>
+    	                        <option value="7">Academias</option>
+                            </select>
+                        </div>
+                    </fieldset>
+                        <div class="container-field-icon">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <label for="infoBasic">Endereço</label>
+                        </div>
+                    <fieldset>
+                        <div class="estilo-select">
+                            <div>
+                                <label for="estado">Estado</label>
+                                <select id="estado" name="estado">
+                                    <option value="ES">ES</option>
+                                    <option value="MG">MG</option>
+                                    <option value="SP">SP</option>
+                                    <option value="RJ">RJ</option>
+                                </select>
+                            </div>
+                            <div>
+                                <input placeholder="Cidade" type="text" id="cidade" name="cidade">
+                            </div>
+                        </div>
+                        <div>
+                            <!-- <label for="cidade">Cidade</label> -->
+                            <input required type="text" name="bairro" id="bairro" placeholder="Bairro" value="morada de laranjeiras">
+                        </div>
+                        <div class="estilo-select">
+                            <select name="tipo_logradouro" id="tipoLogradouro">
+                                <option value="rua">Avenida</option>
+                                <option value="avenida">Rua</option>
+                                <option value="alameda">Alameda</option>
+                            </select>
+                            <input type="text" name="logradouro" id="endereco" placeholder="Endereço" value="dos Sabias">
+                        </div>
+                        <div>
+                            <!-- <label for="numero">Numero</label> -->
+                            <input required size="4" type="text" id="numero" name="numero" placeholder="Número" value="330">
+                        </div>
+                    </fieldset>
+                    <!-- <fieldset id="fieldAval">
+                        <div id="containerEstrelas" class="estilo-container">
+                            <div>Avalie o restaurante*</div>
+                            <div>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                        </div>
+                    </fieldset> -->
+                <input type="hidden" name="latitude" id="latitude">
+                <input type="hidden" name="longitude" id="longitude">
+                </div>
+        </form>
+        <input type="submit" value="Cadastrar" id="botCad">
+    </div>
+</body>
+</html>

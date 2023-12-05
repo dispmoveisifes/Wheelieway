@@ -1,0 +1,167 @@
+@import "fontsAndColors.css";
+
+/*posicionamento geral e design geral*/
+    * {
+        font-family: var(--font-inter);
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    footer {
+        width: 100%;
+        color: var(--color-white);
+    }
+
+    #footer_content {
+        background-color: var(--color-blue5);
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        padding: 3rem 3.5rem;
+    }
+/*------------------*/
+
+/*removendo o text decoration de todas <a> tags*/
+.footer-link {
+    text-decoration: none;
+}
+
+/*coluna de mídias sociais*/
+    /*redimensionando a logo*/
+    #footer_contacts img {
+        height: 5rem;
+        width: 5rem;
+        margin: 0 3.28rem 0 3.28rem;
+    }
+
+    /*posicionamento e design dos ícones das mídias sociais*/
+        #footer_social_media {
+            display: flex;
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        #footer_social_media .footer-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 2.5rem;
+            width: 2.5rem;
+            color: var(--color-white);
+            border-radius: 50%;
+            transition: all 0.4s;
+        }
+
+        #footer_social_media .footer-link i {
+            font-size: 1.25rem;
+        }
+
+        #footer_social_media .footer-link:hover {
+            opacity: 0.8;
+        }
+
+        #instagram {
+            background: linear-gradient(#7f37c9, #ff2992, #ff9807);
+        }
+
+        #twitter {
+            background-color: var(--color-black);
+        }
+
+        #whatsapp {
+            background-color: #25d366;
+        }
+    /*------------------*/
+/*------------------*/
+
+/*posicionamento e design da coluna dos meios de contato e plataformas*/
+    .footer-list {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        list-style: none;
+    }
+
+    .footer-list .footer-link {
+        color: var(--color-gray);
+        transition: all 0.4s;
+    }
+
+    .footer-list .footer-link:hover {
+        color: var(--color-blue1);
+    }
+/*------------------*/
+
+/*posicionamento e design da coluna de inscrição*/
+    #footer_subscribe {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    #footer_subscribe p {
+        color: var(--color-gray);
+    }
+
+    #input_group {
+        display: flex;
+        align-items: center;
+        background-color: var(--color-white);
+        border-radius: 4px;
+    }
+
+    #input_group input {
+        all: unset;
+        padding: 0.75rem;
+        width: 100%;
+    }
+
+    #input_group button {
+        background-color: var(--color-blue1);
+        border: none;
+        color: var(--color-white);
+        padding: 0px 1.25rem;
+        font-size: 1.125rem;
+        height: 100%;
+        border-radius: 0px 4px 4px 0px;
+        cursor: pointer;
+        transition: all 0.4s;
+    }
+
+    #input_group button:hover {
+        opacity: 0.8;
+    }
+/*------------------*/
+
+/*posicionamento e design da linha de copyrights*/
+#footer_copyright {
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-blue4);
+    font-size: 0.9rem;
+    padding: 1.5rem;
+    font-weight: 100;
+}
+
+/*responsividade*/
+@media screen and (max-width: 768px) {
+    /*configurando para duas colunas*/
+    #footer_content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+/*responsividade para telas pequenas*/
+@media screen and (max-width: 430px) {
+    /*configurando para uma coluna*/
+    #footer_content {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 3rem 2rem;
+    }
+
+    #footer_contacts {
+        width: fit-content;
+        justify-self: center;
+    }
+}

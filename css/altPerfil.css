@@ -1,0 +1,16 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+fieldset{
+    display: flex;
+    flex-direction: column;
+    border: none;
+}
+
+input[type="email"], input[type="password"]{
+    width: 300px;
+}

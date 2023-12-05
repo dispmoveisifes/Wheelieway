@@ -1,0 +1,167 @@
+@import "fontsAndColors.css";
+
+/*posicionamento geral e design geral*/
+    header {
+        width: 100%;
+        color: var(--color-white);
+        font-family: var(--font-inter);
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    #header_content {
+        background-color: var(--color-white);
+        display: flex;
+        justify-content: space-between;
+        padding: 2rem 10rem;
+    }
+/*------------------*/
+
+/*removendo o text decoration de todas <a> tags*/
+    .header-link, .header-link-mobile, .header-btnRegister, .header-btnLogin, .mobile-menu, #header_name .logo {
+        text-decoration: none;
+    }
+/*------------------*/
+
+/*removendo o display de todas tags exclusivas do mobile*/
+    .mobile-menu, #header_options .header-link-mobile {
+        display: none;
+    }
+/*------------------*/
+
+/*design do nome e da logo*/
+    #header_name ,#header_name .logo {
+        display: flex;
+        gap: 1rem;
+    }
+
+    #header_name img {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    #header_name h1 {
+        display: flex;
+        align-items: center;
+        font-family: var(--font-lemonmilk);
+        color: var(--color-blue3);
+    }
+/*------------------*/
+
+/*design das opções*/
+    /*posicionamento das opções*/
+        #header_options {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+    /*------------------*/
+
+    /*design dos links que são textos*/
+        #header_options .header-link {
+            color: var(--color-gray);
+            transition: all 0.4s;
+        }
+
+        #header_options .header-link:hover {
+            color: var(--color-blue1);
+        }
+    /*------------------*/
+
+    /*design dos links que são botões*/
+        #header_options .header-btnRegister, #header_options .header-btnLogin {
+            background-color: var(--color-blue2);
+            color: var(--color-white);
+            border: solid 2px var(--color-blue2);
+            width: 9rem;
+            padding: 0.8rem 0.5rem 0.8rem 0.5rem;
+            text-align: center;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            transition: all 0.4s;
+        }
+
+        #header_options .header-btnRegister:hover {
+            background-color: var(--color-white);
+            color: var(--color-blue2);
+        }
+
+        #header_options .header-btnLogin {
+            background-color: var(--color-white);
+            color: var(--color-blue2);
+        }
+
+        #header_options .header-btnLogin:hover {
+            background-color: var(--color-blue2);
+            color: var(--color-white);
+        }
+    /*------------------*/
+
+    /*design dos links que são ícones*/
+        #header_options .header-iconLink {
+            font-size: 2.5rem;
+            color: var(--color-blue2);
+            transition: all 0.4s;
+        }
+
+        #header_options .header-iconLink:hover {
+            opacity: 0.8;
+        }
+    /*------------------*/
+/*------------------*/
+
+/*responsividade*/
+@media screen and (max-width: 768px) {
+    /*removendo o display de todas tags exclusivas de desktop*/
+    #header_options .header-btnRegister, #header_options .header-btnLogin, #header_options .header-iconLink, #header_options {
+        display: none;
+    }
+
+    /*habilitando todas as tags exclusivas de mobile*/
+    #header_options .header-link-mobile, .mobile-menu {
+        display: flex;
+    }
+
+    /*reposicionando*/
+    #header_content {
+        padding: 1rem 1rem;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /*design do botão do menu mobile*/
+    .mobile-menu {
+        align-items: center;
+        font-size: 2.5rem;
+        color: var(--color-blue3);
+    }
+
+    /*design do menu mobile*/
+    #header_options {
+        flex-direction: column;
+        align-self: flex-end;
+        padding: 1rem;
+        border-radius: 30px;
+        background-color: var(--color-blue5);
+    }
+
+    /*design dos links do menu mobile*/
+    #header_options .header-link-mobile, #header_options .header-link {
+        color: var(--color-white);
+        text-transform: uppercase;
+    }
+
+    label[for="userIcon"]{
+        display: none;
+    }
+}
+
+/*responsividade para mobile em telas muito pequenas*/
+@media screen and (max-width: 370px) {
+    /*escondendo a logo*/
+    #header_name img {
+        display: none;
+    }
+}
