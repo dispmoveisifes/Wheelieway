@@ -73,7 +73,7 @@
             
 			error_log("entrou aqui 0", 0);
             $resultInsertEstab = $insertEstab->execute();
-			error_log("resultInsertEstab = " . var_dump(resultInsertEstab, 0);
+			error_log("resultInsertEstab = " . var_dump(resultInsertEstab, 0));
 			if($resultInsertEstab){
                 error_log("entrou aqui 1", 0);
                 $resposta["sucesso"] = 1;
