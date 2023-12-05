@@ -73,7 +73,7 @@
             error_log("idFotoEstab " . $idFotoEstab, 0);
             error_log("idEnderecoEstab " . $idEnderecoEstab, 0);
 
-            $insertEstab = $db->prepare("INSERT INTO ESTABELECIMENTO (nota_media, nome, FK_endereco_endereco_PK, FK_tipo_estabelecimento_tipo_estabelecimento_PK, FK_foto_estabelecimento_foto_estabelecimento_PK, FK_selo_selo_PK) VALUES (null, '$nome_estabelecimento', $idEnderecoEstab, '$tipo_estab', $idFotoEstab, null)");
+            $insertEstab = $db->prepare("INSERT INTO ESTABELECIMENTO (nota_media, nome, FK_endereco_endereco_PK, FK_tipo_estabelecimento_tipo_estabelecimento_PK, FK_foto_estabelecimento_foto_estabelecimento_PK, FK_selo_selo_PK) VALUES (null, '$nome_estabelecimento', '$idEnderecoEstab', '$tipo_estab', '$idFotoEstab', null)");
             
 			error_log("entrou aqui 0", 0);
             $resultInsertEstab = $insertEstab->execute();
