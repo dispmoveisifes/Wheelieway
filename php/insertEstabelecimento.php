@@ -1,4 +1,8 @@
 <?php
+
+	ini_set("default_socket_timeout", 60);
+	set_time_limit(60);
+		
     require("pdoConnect.php");
     //parcialmente funcional
     $resposta = array();
