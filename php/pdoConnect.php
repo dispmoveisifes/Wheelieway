@@ -11,6 +11,7 @@
 
         //alguns atributos de performance.
         $db->setAttribute(PDO::ATTR_EMULATE_PREPARES,false);
+		$db->setAttribute(PDO::ATTR_TIMEOUT,30);
         $db->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
     }
     catch(Exception $e){
